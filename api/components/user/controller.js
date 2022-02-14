@@ -19,7 +19,7 @@ module.exports = function (injectedStore) {
 
     async function upsert(body) {
         const user = {
-            name: body.usernme,
+            name: body.name,
             username: body.username,
         }
 
@@ -33,7 +33,7 @@ module.exports = function (injectedStore) {
             await auth.upsert({
                 id: user.id,
                 username: user.username,
-                password: body.password
+                password: body.password,
             })
         }
 
